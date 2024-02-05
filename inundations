@@ -1,0 +1,4 @@
+var s2 = ee.ImageCollection('COPERNICUS/S2_HARMONIZED')
+             .filterDate(startDate, endDate)
+             .filterBounds(geometry)
+             .filter(ee.Filter.lt('CLOUDY_PIXEL_PERCENTAGE', 35));
